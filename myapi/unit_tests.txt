@@ -1,33 +1,31 @@
-Я использовал для тестирования Postman, поэтому буду исходить из этого
+Я использовал для тестирования Postman, поэтому и тесты написал для работы с ним
 В силу ограниченности времени я создал только тесты которые покажут, что основной функционал работает,
 но не создал тестов, которые показали бы отлавливание ошибок и багов
 После каждого из запросов можно смотреть на изменения в БД либо запрашивать GET на /api/seegoodswhichleft 
 или на /api/seegoodslist, также можно проверить генерацию документов GET /api/getdocuments
-/api/buygoods POST
 
 
 Запросы:
+
+/api/buygoods POST
 
 Создаются товары из массива на складе warehouse, устанавливается цена покупки, цена продажи не устанавливается либо не меняется
 
 {
 	"warehouse" : "ZIL",
-	"warehouse_to" :"Kolomenskoe",
 	"goods":
 	[
 		{
 			"code" : "623",
 			"name" : "Mirror",
 			"amount" : "1000",
-			"lastBuyPrice" : "1399.99",
-			"lastSellPrice" : "12111.55"
+			"lastBuyPrice" : "1399.99"
 		},
 		{
 			"code" : "131",
 			"name" : "Shirt",
 			"amount" : "200",
-			"lastBuyPrice" : "1999.99",
-			"lastSellPrice" : "12111.55"
+			"lastBuyPrice" : "1999.99"
 		}
 	]
 }
@@ -36,22 +34,19 @@
 
 /api/sellgoods POST
 {
-	"warehouse" : "ZIL",
-	"warehouse_to" :"Kolomenskoe",
+	"warehouse" : "ZIL"
 	"goods":
 	[
 		{
 			"code" : "623",
 			"name" : "Mirror",
 			"amount" : "100",
-			"lastBuyPrice" : "1399.99",
 			"lastSellPrice" : "1500.00"
 		},
 		{
 			"code" : "131",
 			"name" : "Shirt",
 			"amount" : "200",
-			"lastBuyPrice" : "1999.99",
 			"lastSellPrice" : "3500.00"
 		}
 	]
@@ -62,7 +57,6 @@
 /api/buygoods POST
 {
 	"warehouse" : "Yasenevo",
-	"warehouse_to" :"Kolomenskoe",
 	"goods":
 	[
 		{
@@ -70,14 +64,12 @@
 			"name" : "Mirror",
 			"amount" : "3000",
 			"lastBuyPrice" : "1399.99",
-			"lastSellPrice" : "1500.00"
 		},
 		{
 			"code" : "131",
 			"name" : "Shirt",
 			"amount" : "200",
 			"lastBuyPrice" : "2499.99",
-			"lastSellPrice" : "3500.00"
 		}
 	]
 }
@@ -86,22 +78,19 @@
 
 /api/sellgoods POST
 {
-	"warehouse" : "Yasenevo",
-	"warehouse_to" :"Kolomenskoe",
+	"warehouse" : "Yasenevo"
 	"goods":
 	[
 		{
 			"code" : "623",
 			"name" : "Mirror",
 			"amount" : "1000",
-			"lastBuyPrice" : "1399.99",
 			"lastSellPrice" : "1499.00"
 		},
 		{
 			"code" : "131",
 			"name" : "Shirt",
 			"amount" : "200",
-			"lastBuyPrice" : "2499.99",
 			"lastSellPrice" : "500.00"
 		}
 	]
@@ -119,15 +108,11 @@
 			"code" : "623",
 			"name" : "Mirror",
 			"amount" : "1",
-			"lastBuyPrice" : "1.99",
-			"lastSellPrice" : "149.00"
 		},
 		{
 			"code" : "131",
 			"name" : "Shirt",
 			"amount" : "200",
-			"lastBuyPrice" : "2499.99",
-			"lastSellPrice" : "500.00"
 		}
 	]
 }
