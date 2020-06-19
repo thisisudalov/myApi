@@ -1,6 +1,5 @@
 package DAO;
 
-import Entity.Document;
 import Entity.DocumentEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,10 +9,12 @@ import java.util.List;
 
 public class DocumentDAOImpl implements DocumentDAO {
 
+    @Override
     public DocumentEntity findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory().openSession().get(DocumentEntity.class, id);
     }
 
+    @Override
     public void save(DocumentEntity document) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
@@ -22,6 +23,7 @@ public class DocumentDAOImpl implements DocumentDAO {
         session.close();
     }
 
+    @Override
     public void update(DocumentEntity document) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
@@ -30,6 +32,7 @@ public class DocumentDAOImpl implements DocumentDAO {
         session.close();
     }
 
+    @Override
     public void delete(DocumentEntity document) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Transaction tx1 = session.beginTransaction();
@@ -37,7 +40,7 @@ public class DocumentDAOImpl implements DocumentDAO {
         tx1.commit();
         session.close();
     }
-
+    @Override
     public List<DocumentEntity> findAll() {
         List<DocumentEntity> document = (List<DocumentEntity>)  HibernateSessionFactoryUtil.getSessionFactory().openSession().createQuery("From DocumentEntity").list();
         return document;

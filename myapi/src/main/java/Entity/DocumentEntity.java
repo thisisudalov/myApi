@@ -11,9 +11,9 @@ public class DocumentEntity {
     @Column(name = "id")
     private int id;
 
-    String warehouse;
-    String warehouse_to;
-    String goods;
+    private String warehouse;
+    private String warehouse_to;
+    private String goods;
 
     public DocumentEntity(){}
 

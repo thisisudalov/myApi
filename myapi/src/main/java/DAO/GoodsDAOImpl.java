@@ -6,7 +6,6 @@ import org.hibernate.query.NativeQuery;
 import utils.HibernateSessionFactoryUtil;
 
 import javax.persistence.Query;
-import java.util.Iterator;
 import java.util.List;
 
 public class GoodsDAOImpl implements GoodsDAO {

@@ -3,9 +3,9 @@ package Entity;
 import java.util.List;
 //Класс для сериализации запроса на перемещение товаров - конструктор отличается от Document
 public class DocumentMove {
-    String warehouse;
-    String warehouse_to;
-    List<Goods> goods;
+    private String warehouse;
+    private String warehouse_to;
+    private List<Goods> goods;
 
     public String getWarehouse() {
         return warehouse;

@@ -2,7 +2,7 @@ package Entity;
 
 public class Name {
 
-    String name;
+    private String name;
 
     public Name(String name) {
         this.name = name;
@@ -15,4 +15,6 @@ public class Name {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

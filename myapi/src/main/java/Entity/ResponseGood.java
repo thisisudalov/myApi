@@ -4,9 +4,9 @@ import java.util.List;
 import java.util.Map;
 
 public class ResponseGood {
-    String name;
-    long code;
-    Map<String, Integer> rgmap;
+    private String name;
+    private long code;
+    private Map<String, Integer> rgmap;
 
     public ResponseGood(Map<String, Integer> rgmap, String name, long code) {
         this.rgmap = rgmap;

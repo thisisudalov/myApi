@@ -10,9 +10,10 @@ import com.google.gson.JsonParseException;
 
 import java.util.*;
 
+
+
 public class PostBuyController {
     static String post(String body, GoodsService goodsService){
-
         String response = "";
 
         DocumentService documentService = new DocumentService();
